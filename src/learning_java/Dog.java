@@ -1,6 +1,6 @@
 package learning_java;
 
-public class Dog {
+public class Dog implements Comparable<Dog> {
 
     // Attributes
     protected String name;
@@ -23,4 +23,24 @@ public class Dog {
     public static void animalSpeak() {
         System.out.println("I am an animal!");
     }
+
+    public boolean equals(Dog other) {
+        // Checks if the names of 2 objects are the same. If they are, return true.
+        if (this.name == other.name) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int compareTo(Dog other) {
+        // returns int, so how far away this.name first letter is from other.name first letter
+        return this.name.compareTo(other.name);
+    }
+
+    public String toString() {
+        return this.name;
+    }
+
+
 }

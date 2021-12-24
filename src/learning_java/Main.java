@@ -175,7 +175,15 @@ public class Main {
         cat1.speak();
         cat1.animalSpeak(); // accessing static method via instance reference (i.e., using cat1 object)
 
+        System.out.println(ted.equals(cat1)); // false, object names are not the same.
 
+
+        // Interfaces and classes
+        Car kia = new Car();
+        kia.status();
+        kia.speedUp(10);
+        kia.changeGear(2);
+        kia.status();
 
 
 
